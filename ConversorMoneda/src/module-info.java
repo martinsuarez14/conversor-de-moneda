@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author Usuario
- *
- */
-module ConversorMoneda {
-}

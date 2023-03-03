@@ -1,0 +1,181 @@
+package Servicio;
+
+import javax.swing.JOptionPane;
+import Errores.ErroresMoneda;
+
+public class MenuServicio {
+
+	private MonedaServicio ms;
+	private TemperaturaServicio ts;
+	private LongitudServicio ls;
+
+	public MenuServicio() {
+		this.ms = new MonedaServicio();
+		this.ts = new TemperaturaServicio();
+		this.ls = new LongitudServicio();
+	}
+
+	public void menu() throws ErroresMoneda {
+
+		String[] menu = { 
+				"Conversor de monedas", 
+				"Conversor de temperatura",
+				"Conversor de longitudes millas/kilómetros",
+				"Salir"
+		};
+		
+		String[] conversoresDeMonedas = {
+				"De Peso a Dolar",
+				"De Peso a Euro",
+				"De Peso a Libras Esterlinas",
+				"De Peso a Won Surcoreano",
+				"De Peso a Yen Japonés",
+				"De Dolar a Peso",
+				"De Euro a Peso",
+				"De Libras Esterlinas a Peso",
+				"De Won Surcoreano a Peso",
+				"De Yen Japonés a Peso"
+		};
+		
+		String[] conversoresTemperatura = {
+				"De Celsius a Fahrenheit",
+				"De Celsius a Kelvin",
+				"De Fahrenheit a Celsius",
+				"De Fahrenheit a Kelvin",
+				"De Kelvin a Celsius",
+				"De Kelvin a Fahrenheit"
+		};
+
+		String[] conversoresLongitud = {
+				"De Kilómetros a Millas",
+				"De Millas a Kilómetros"
+		};
+
+		boolean flag = true;
+
+		while (flag == true) {
+			String opcionMenu = (String) JOptionPane.showInputDialog(null, "Seleccione el conversor que desea",
+					"Conversores", JOptionPane.DEFAULT_OPTION, null, menu, menu[0]);
+
+			switch (opcionMenu) {
+				case "Conversor de monedas":
+					
+					String respuestaConversorMoneda =(String) JOptionPane.showInputDialog(null, "Seleccione el cambio de divisas que desea", 
+							"Conversores de Monedas", JOptionPane.DEFAULT_OPTION, null, conversoresDeMonedas, conversoresDeMonedas[0]);
+
+					if (respuestaConversorMoneda == null) {
+						break;
+					}
+					
+					switch (respuestaConversorMoneda) {
+						case "De Peso a Dolar":
+							double montoPesoDolar = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el monto a convertir"));
+							JOptionPane.showMessageDialog(null, "$" + montoPesoDolar + " equivalen a $" + ms.dePesoADolar(montoPesoDolar) + " dólares.");
+							break;
+						case "De Peso a Euro":
+							double montoPesoEuro = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el monto a convertir"));
+							JOptionPane.showMessageDialog(null, "$" + montoPesoEuro + " equivalen a $" + ms.dePesoAEuro(montoPesoEuro) + " euros.");
+							break;
+						case "De Peso a Libras Esterlinas":
+							double montoPesoLibras = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el monto a convertir"));
+							JOptionPane.showMessageDialog(null, "$" + montoPesoLibras + " equivalen a $" + ms.dePesoALibrasEsterlinas(montoPesoLibras) + " libras esterlinas.");
+							break;
+						case "De Peso a Won Surcoreano":
+							double montoPesoWon = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el monto a convertir"));
+							JOptionPane.showMessageDialog(null, "$" + montoPesoWon + " equivalen a $" + ms.dePesoAWonSurcoreano(montoPesoWon) + " wones.");
+							break;
+						case "De Peso a Yen Japonés":
+							double montoPesoYen = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el monto a convertir"));
+							JOptionPane.showMessageDialog(null, "$" + montoPesoYen + " equivalen a $" + ms.dePesoAYenJapones(montoPesoYen) + " yenes.");	
+							break;
+						case "De Dolar a Peso":
+							double montoDolarPeso = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el monto a convertir"));
+							JOptionPane.showMessageDialog(null, "$" + montoDolarPeso + " equivalen a $" + ms.deDolarAPeso(montoDolarPeso) + " pesos.");
+							break;
+						case "De Euro a Peso":
+							double montoEuroPeso = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el monto a convertir"));
+							JOptionPane.showMessageDialog(null, "$" + montoEuroPeso + " equivalen a $" + ms.deEuroAPeso(montoEuroPeso) + " pesos.");			
+							break;
+						case "De Libras Esterlinas a Peso":
+							double montoLibrasPeso = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el monto a convertir"));
+							JOptionPane.showMessageDialog(null, "$" + montoLibrasPeso + " equivalen a $" + ms.deLibrasEsterlinasAPeso(montoLibrasPeso) + " pesos.");
+							break;
+						case "De Won Surcoreano a Peso":
+							double montoWonPeso = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el monto a convertir"));
+							JOptionPane.showMessageDialog(null, "$" + montoWonPeso + " equivalen a $" + ms.deWonSurcoreanoAPeso(montoWonPeso) + " pesos.");
+							break;
+						case "De Yen Japonés a Peso":
+							double montoYenPeso = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el monto a convertir"));
+							JOptionPane.showMessageDialog(null, "$" + montoYenPeso + " equivalen a $" + ms.deYenJaponesAPeso(montoYenPeso) + " pesos.");
+							break;
+					}
+					break;
+					
+				case "Conversor de temperatura":
+					
+					String respuestaConversorTemperatura =(String) JOptionPane.showInputDialog(null, "Seleccione el conversor de temperatura que desea", 
+							"Conversores de Temperatura", JOptionPane.DEFAULT_OPTION, null, conversoresTemperatura, conversoresTemperatura[0]);
+					
+					if (respuestaConversorTemperatura == null) {
+						break;
+					}
+					
+					switch (respuestaConversorTemperatura) {
+						case "De Celsius a Fahrenheit":
+							double celsiusFahrenheit = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese la temperatura en Celsius"));
+							JOptionPane.showMessageDialog(null, celsiusFahrenheit + "°C equivalen a $" + ts.deCelsiusAFahrenheit(celsiusFahrenheit) + " °F.");
+							break;
+						case "De Celsius a Kelvin":
+							double celsiusKelvin = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese la temperatura en Celsiusr"));
+							JOptionPane.showMessageDialog(null, celsiusKelvin + "°C equivalen a $" + ts.deCelsiusAKelvin(celsiusKelvin) + " °K.");
+							break;
+						case "De Fahrenheit a Celsius":
+							double fahrenheitCelsius = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese la temperatura en Fahrenheit"));
+							JOptionPane.showMessageDialog(null, fahrenheitCelsius + "°F equivalen a $" + ts.deFahrenheitACelsius(fahrenheitCelsius) + " °C.");
+
+							break;
+						case "De Fahrenheit a Kelvin":
+							double fahrenheitKelvin = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese la temperatura en Fahrenheit"));
+							JOptionPane.showMessageDialog(null, fahrenheitKelvin + "°F equivalen a $" + ts.deFahrenheitAKelvin(fahrenheitKelvin) + " °K.");
+							break;
+						case "De Kelvin a Celsius":
+							double kelvinCelsius = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese la temperatura en Kelvin"));
+							JOptionPane.showMessageDialog(null, kelvinCelsius + "°K equivalen a " + ts.deKelvinACelsius(kelvinCelsius) + " °C.");
+							break;
+						case "De Kelvin a Fahrenheit":
+							double kelvinFahrenheit = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese la temperatura en Kelvin"));
+							JOptionPane.showMessageDialog(null, kelvinFahrenheit + "°K equivalen a " + ts.deKelvinAFahrenheit(kelvinFahrenheit) + " °F.");
+							break;
+					}
+					
+				case "Conversor de medidas de longitud":
+					
+					String respuestaConversorLongitud =(String) JOptionPane.showInputDialog(null, "Seleccione qué medida desea convertir", 
+							"Conversores de Longitud", JOptionPane.DEFAULT_OPTION, null, conversoresLongitud, conversoresLongitud[0]);
+					
+					if (respuestaConversorLongitud == null) {
+						break;
+					}
+					
+					switch (respuestaConversorLongitud) {
+						case "De Kilómetros a Millas":
+							double kmMilla = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese los kilómetros"));
+							JOptionPane.showMessageDialog(null, kmMilla + "km equivalen a " + ls.deKmAMillas(kmMilla) + " millas.");
+							break;
+						case "De Millas a Kilómetros":
+							double millaKm = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese las millas"));
+							JOptionPane.showMessageDialog(null, millaKm + "millas equivalen a " + ls.deMillasAKm(millaKm) + " km.");
+							break;
+					}
+					
+					break;
+					
+				case "Salir": 
+					flag = false;
+					break;
+			}
+			
+		}
+
+	}
+}
