@@ -9,7 +9,7 @@ public class ConversorMoneda {
 		
 		MenuServicio menuServicio = new MenuServicio();
 		
-		menuServicio.menu();
+		menuServicio.menuSelecionConversor();
 		
 	}
 
