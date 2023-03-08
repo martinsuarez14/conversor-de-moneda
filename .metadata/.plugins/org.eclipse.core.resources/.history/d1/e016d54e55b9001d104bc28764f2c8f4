@@ -1,0 +1,102 @@
+package Servicio;
+
+import Entidades.Moneda;
+
+public class MonedaServicio {
+
+	private Moneda moneda;
+	
+	public MonedaServicio() {
+		this.moneda = new Moneda();
+	}
+	
+	public double dePesoADolar(double peso) {
+		try {
+			return peso / moneda.getDolar();
+		} catch (Exception e) {
+			e.getStackTrace();
+			return 0.0;
+		}
+	}
+	
+	public double dePesoAEuro(double peso) {
+		try {
+			return peso / moneda.getEuro();
+		} catch (Exception e) {
+			e.getStackTrace();
+			return 0.0;
+		}
+	}
+	
+	public double dePesoALibrasEsterlinas(double peso) {
+		try {
+			return peso / moneda.getLibrasEsterlinas();
+		} catch (Exception e) {
+			e.getStackTrace();
+			return 0.0;
+		}
+	}
+	
+	public double dePesoAWonSurcoreano(double peso) {
+		try {
+			return peso / moneda.getWonSurcoreano();
+		} catch (Exception e) {
+			e.getStackTrace();
+			return 0.0;
+		}
+	}
+
+	public double dePesoAYenJapones(double peso) {
+		try {
+			return peso / moneda.getYenJapones();
+		} catch (Exception e) {
+			e.getStackTrace();
+			return 0.0;
+		}
+	}
+	
+	public double deDolarAPeso(double dolar) {
+		try {
+			return dolar * moneda.getDolar();
+		} catch (Exception e) {
+			e.getStackTrace();
+			return 0.0;
+		}
+	}
+	
+	public double deEuroAPeso(double euro) {
+		try {
+			return euro * moneda.getEuro();
+		} catch (Exception e) {
+			e.getStackTrace();
+			return 0.0;
+		}
+	}
+	
+	public double deLibrasEsterlinasAPeso(double libras) {
+		try {
+			return libras * moneda.getLibrasEsterlinas();
+		} catch (Exception e) {
+			e.getStackTrace();
+			return 0.0;
+		}
+	}
+	
+	public double deWonSurcoreanoAPeso(double won) {
+		try {
+			return won * moneda.getWonSurcoreano();
+		} catch (Exception e) {
+			e.getStackTrace();
+			return 0.0;
+		}
+	}
+
+	public double deYenJaponesAPeso(double yen) {
+		try {
+			return yen * moneda.getYenJapones();
+		} catch (Exception e) {
+			e.getStackTrace();
+			return 0.0;
+		}
+	}
+}

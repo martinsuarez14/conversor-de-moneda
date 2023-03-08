@@ -1,0 +1,31 @@
+package ConversorMoneda;
+
+
+import javax.swing.JOptionPane;
+
+import Errores.ErroresMoneda;
+import Servicio.MenuServicio;
+import Servicio.MonedaServicio;
+
+public class ConversorMoneda {
+
+	public static void main(String[] args) throws ErroresMoneda {
+		
+		//MenuServicio menuServicio = new MenuServicio();
+		
+		//menuServicio.menu();
+		
+		String[] salir = {
+				"Si",
+				"No"
+		};
+		
+		String continuarSalir = (String) JOptionPane.showInputDialog(null, "¿Desea cerrar el programa?",
+				"Alerta!", JOptionPane.DEFAULT_OPTION, null, salir, salir[0]);
+		
+		System.out.println(continuarSalir);
+		
+		System.out.println("Hello Word!");
+	}
+
+}

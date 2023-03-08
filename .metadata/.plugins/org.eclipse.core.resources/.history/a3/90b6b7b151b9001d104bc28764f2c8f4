@@ -1,0 +1,58 @@
+package Servicio;
+
+import Entidades.Moneda;
+
+public class MonedaServicio {
+
+	private Moneda moneda;
+	
+	public MonedaServicio() {
+		this.moneda = new Moneda();
+	}
+	public double dePesoADolar(double peso) {
+		try {
+			return peso / moneda.getDolar();
+		} catch (Exception e) {
+			e.getStackTrace();
+			return 0.0;
+		}
+	}
+	
+	public double dePesoAEuro(double peso) {
+		try {
+			return peso * moneda.getEuro();
+		} catch (Exception e) {
+			e.getStackTrace();
+			return 0.0;
+		}
+	}
+	
+	public double dePesoALibrasEsterlinas(double peso) {
+		try {
+			return peso * moneda.getLibrasEsterlinas();
+		} catch (Exception e) {
+			e.getStackTrace();
+			return 0.0;
+		}
+	}
+	
+	public double dePesoAWonSurcoreano(double peso) {
+		try {
+			return peso * moneda.getWonSurcoreano();
+		} catch (Exception e) {
+			e.getStackTrace();
+			return 0.0;
+		}
+	}
+
+	public double dePesoAYenJapones(double peso) {
+		try {
+			return peso * moneda.getYenJapones();
+		} catch (Exception e) {
+			e.getStackTrace();
+			return 0.0;
+		}
+	}
+	
+	
+}

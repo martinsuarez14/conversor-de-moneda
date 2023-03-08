@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\MARTÍN\Proyectos\Conversor_de_moneda_Challenge_Alura_ONE\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+3443461419.index
+3542475962.index

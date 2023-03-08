@@ -1,0 +1,20 @@
+package ConversorMoneda;
+
+import javax.swing.JOptionPane;
+
+import Errores.ErroresMoneda;
+import Servicio.MenuServicio;
+
+public class ConversorMoneda {
+
+	public static void main(String[] args) throws ErroresMoneda {
+		
+		//MenuServicio menuServicio = new MenuServicio();
+		
+		//menuServicio.menuSelecionConversor();
+		
+		String respuesta = JOptionPane.showInputDialog(null, JOptionPane.YES_NO_OPTION);
+		System.out.println(respuesta);
+	}
+
+}

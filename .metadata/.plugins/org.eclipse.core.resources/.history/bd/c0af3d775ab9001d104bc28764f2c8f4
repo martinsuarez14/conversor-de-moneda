@@ -1,0 +1,30 @@
+package ConversorMoneda;
+
+import javax.swing.JOptionPane;
+
+import Errores.ErroresMoneda;
+import Servicio.MonedaServicio;
+
+public class ConversorMoneda {
+
+	public static void main(String[] args) throws ErroresMoneda {
+		
+		MonedaServicio ms = new MonedaServicio();
+		
+		double moneda = (JOptionPane(null, "Selecciona el tipo de conversor que deseas", "Conversor", 
+				JOptionPane.PLAIN_MESSAGE,null, new Object[] { "Selecciona", 0.1, 0.2, 0.3, 0.4, 0.5 }, 
+				"Selecciona"));
+		JOptionPane.showMessageDialog(null, "Tu numero elegido es: " + moneda, "Conversor", JOptionPane.PLAIN_MESSAGE);
+		
+		double peso = 25;
+		
+		System.out.println(moneda);
+	}
+
+	private static double JOptionPane(Object object, String string, String string2, int plainMessage, Object object2,
+			Object[] objects, String string3) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

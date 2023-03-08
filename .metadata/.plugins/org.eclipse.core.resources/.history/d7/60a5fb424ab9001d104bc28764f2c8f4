@@ -1,0 +1,28 @@
+package Entidades;
+
+public class Dolar {
+
+	private double dolar = 380;
+
+	public Dolar() {
+		super();
+	}
+
+	public Dolar(double dolar) {
+		super();
+		this.dolar = dolar;
+	}
+
+	public double getDolar() {
+		return dolar;
+	}
+
+	public void setDolar(double dolar) {
+		this.dolar = dolar;
+	}
+
+	public double convertirADolar(double peso) {
+		return peso / this.dolar;
+	}
+	
+}
