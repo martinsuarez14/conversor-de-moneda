@@ -135,3 +135,14 @@ Insignia recibida por haber completado el Challenge
 <p align="center">
    <img src="https://res.cloudinary.com/dbaqfw9vn/image/upload/v1678312423/Conversor%20Challenge%20-%20Alura%20ONE/cms_files_10224_1671211831Prancheta_8_yiws3v.png">
 </p>
+
+## Autor ✒️
+
+* **Martin Suarez** - [martinsuarez14](https://github.com/martinsuarez14)
+
+## Expresiones de Gratitud 🎁
+
+* Agradezco infinitamente a Alura ONE y al profesor [Darguelles](https://github.com/Darguelles) 🤓.
+
+---
+⌨️ con ❤️ por [martinsuarez14](https://github.com/martinsuarez14) 😊
